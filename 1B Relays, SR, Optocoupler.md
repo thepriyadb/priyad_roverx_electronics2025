@@ -7,6 +7,7 @@ A basic electromechanical relay is constructed using an electromagnet, a movabl
 ![Inside relay digram](InsideRelay.png)
 The _coil_ pins control the switch, and the _NC_, _NO_, and _COM_ pins make up the switch.
 ![Inside relay](InsideRelay2.png)
+
 A coil wound around a magnetic core makes up an electromagnet. It generates a magnetic field around it when an electrical current passes through the coil.
 The armature is a movable component within the relay. When the coil is energized, the magnetic field it produces attracts the armature, causing it to move.
 The return spring is connected to the armature, providing a restoring force when the coil is de-energized. It ensures that the armature returns to its original position when the electrical current through the coil ceases.
@@ -23,16 +24,22 @@ A three-phase SSR is designed to control high-power three-phase AC loads by simu
 ## Pin Connections:
 Normally Open (NO) Pin Connection: If you want the device that you want to switch on/off to be disconnected from power when the relay is not activated, you need to use the normally open (NO) pin. As soon as the relay coil receives power, the switch closes, completing the circuit and allowing electricity to flow through it so that whatever you’ve connected turns on.
 ![[NormallyOpen.png]]
+
 Normally Closed (NC) Pin Connection: If you want the device that you want to control to be connected to power when the relay is not activated, you need to use the normally closed (NC) pin. As soon as the relay coil receives power, it causes the switch to open, interrupting the circuit and stopping the flow of electricity to your device.
 ![[NormallyClosed.png]]
+
 ## Relay Switch types:
 * SPDT Relay: _Single Pole Double Throw (SPDT)_. It’s the most commonly used. It’s a 5-pin relay with the following pins:
   The _COM_ pin is always used. And although you can use both _NC_ and _NO_, it’s common to use just one of them.
-  ![[SPDT.png]]
+    ![[SPDT.png]]
+  
 * Single Pole Single Throw (SPST) : This relay has one normally open (NO) and one common (COM) contact. It can either connect or disconnect a single circuit.![SPST Relay symbol](https://www.build-electronic-circuits.com/wp-content/uploads/2024/02/Relay-_SPST.png)
+
 * Double Pole Single Throw (DPST) : DPST relays feature two sets of contacts, each set capable of controlling a single circuit. Both switches can be open or closed simultaneously.![DPST Relay symbol](https://www.build-electronic-circuits.com/wp-content/uploads/2024/02/Relay-_DPST.png)
+
   * Double Pole Double Throw (DPDT) : DPDT relays have two sets of contacts, each set capable of controlling two separate circuits. It provides a double-throw functionality for each of the two poles.
     ![DPDT Relay symbol](https://www.build-electronic-circuits.com/wp-content/uploads/2024/02/Relay-_DPDT.png)
+
 ## Types of Relays:
 1) **Latching Relay**: Latching relays are commonly used in low power consumption or high temperature applications where applying coil power for a long time cannot be afforded due to power consumption or self heating of the coil. Instead of a continuous voltage applied to the coil, they are operated with short voltage pulses instead. Latching relays change contact position when a coil voltage is applied and remain in that position even if the voltage is disconnected. 
    They are characterized by their bistable operation, meaning they have two stable positions: set (on) and reset (off).
@@ -45,7 +52,8 @@ Normally Closed (NC) Pin Connection: If you want the device that you want to con
    * **Mechanical:** Mechanical latching relays use a ratchet and pawl mechanism to maintain the position of the contacts. The relay is set or reset by moving the pawl with a pulse to the coil.
    * **Electronic (solid-state relays):** These are not traditional electromechanical relays but use semiconductor devices to perform the latching function without moving parts. They maintain their state using electronic circuitry rather than a mechanical mechanism.
    **Applications:** Utility meters, portable medical devices, security systems.
-2) **Reed Relay:** A reed relay is a small electromagnetic switching device. Reed relays are made by placing a coil around one or more reed switches. A reed switch uses simple magnetic interaction to open and close it's contacts. And they consume in their normally open state.![[ReedRelays.png]]
+2) **Reed Relay:** A reed relay is a small electromagnetic switching device. Reed relays are made by placing a coil around one or more reed switches. A reed switch uses simple magnetic interaction to open and close it's contacts. And they consume in their normally open state.
+![[ReedRelays.png]]
    There are four contact forms, Form A, B, C, and E.
    First, is the Form A type which is the most common and rests in a normally open (N.O.) switch state. **Form A relays** remain OPEN or OFF until current passes through the coil. The electromagnetic coil produces a magnetic field equal to a permanent magnet. Finally, the resulting magnetic field closes the contacts, switching the relay ON. Conversely, when the coil current is removed, the switch turns off and the contacts return to their open state.
    Next is our second type Form B relays which have normally closed (N.C.) biased contacts held by a magnet. So, the relay rests in the closed or off state until the coil is energized, opening the contacts. De-energizing the coil switches the relay back to its closed or off position.
