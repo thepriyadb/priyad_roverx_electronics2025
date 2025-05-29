@@ -1,12 +1,12 @@
 ## **Relays** 
 relay an electrically operated switch activated by an electromagnet which pulls a set of contacts to make or break a circuit. It uses a small electrical signal to control a large electrical circuit. They use them to turn on/off high-power devices like lamps or garage door motors with just a small DC voltage signal.
 **Construction**:
-![[Relay.png]]
+![Relay diagram](Relay.png)
 A basic electromechanical relay is constructed using an electromagnet, a movable armature, and a set of contacts. The electromagnet, made of a coil and an iron core, creates a magnetic field when energized. This field pulls the armature, which in turn activates or deactivates the contacts, controlling a circuit.
 **Inside the relay:**
-![[InsideRelay.png]]
+![Inside relay digram](InsideRelay.png)
 The _coil_ pins control the switch, and the _NC_, _NO_, and _COM_ pins make up the switch.
-![[InsideRelay2.png]]
+![Inside relay](InsideRelay2.png)
 A coil wound around a magnetic core makes up an electromagnet. It generates a magnetic field around it when an electrical current passes through the coil.
 The armature is a movable component within the relay. When the coil is energized, the magnetic field it produces attracts the armature, causing it to move.
 The return spring is connected to the armature, providing a restoring force when the coil is de-energized. It ensures that the armature returns to its original position when the electrical current through the coil ceases.
