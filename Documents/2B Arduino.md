@@ -21,7 +21,7 @@ It includes:
 - I/O pins - physical pins on it that are used to connect sensors, LEDs, motors, buttons, etc.
 - Headers for sensors and modules - female/male pin connectors on the board
 
-![Arduino.png](Arduino.png)
+![Arduino.png](../Images/Arduino.png)
 
 *Function* of microcontroller in Arduino: 
 It acts as a tiny brain that
@@ -50,7 +50,7 @@ Pins on Arduino which can be programmed to read input signals, send output signa
 *PWM* - Pulse Width Modulation:
 This allows digital pins to simulate analog output by switching signal ON and OFF very fast. It lets control brightness of LEDs, motor speed, represent analog voltage using digital signals. In Arduino Uno, pins 3,5,6,9,10,11 support PWM.
 
-![PWM.png](PWM.png)
+![PWM.png](../Images/PWM.png)
 
 Arduino IDE:
 Software on computer to write Arduino code, verify/compile code, upload code on board via USB. A simplified version of C++ is used.
@@ -116,7 +116,7 @@ Working of sensors and actuators with Arduino:
 Arduino’s ADC takes a voltage signal (like from a sensor) and converts it into a digital value (0-1023 for 10 bit ADC).
 ADC stands for Analog-to-Digital Converter. It converts an analog voltage (a continuous signal like from a temperature sensor or potentiometer) into a digital value (a number the microcontroller can understand).
 
-![ADC.png](ADC.png)
+![ADC.png](../Images/ADC.png)
 
 *Feedback control*: 
 When system monitors the output and adjusts itself to reach a goal. 
