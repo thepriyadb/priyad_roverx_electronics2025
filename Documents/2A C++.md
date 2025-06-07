@@ -30,30 +30,30 @@ Some things you should know:
 
 1. Printing a message
 - without using namespace
-  ![[cpp1.png]]
+  ![cpp1.png](cpp1.png)
   output : Hello!
 - using namespace
-  ![[cpp2.png]]
+  ![cpp2.png](cpp2.png)
   output : Hello World!
 - printing a number
-  ![[cpp3.png]]
+  ![cpp3.png](cpp3.png)
   output : 13
 2. Algebraic functions
-   ![[cpp4.png]]
+   ![cpp4.png](cpp4.png)
    output: 
    10
    64
    91
    2
 3. \n vs endl;
-   ![[cpp5.png]]
+   ![cpp5.png](cpp5.png)
    output:
    Hello!
    How are you?
    Hello!
    How are you?
 4. Variables
-   ![[cpp6.png]]
+   ![cpp6.png](cpp6.png)
    output:
    23
    17
@@ -69,7 +69,7 @@ Some things you should know:
   ![[cpp8.png]]
    output: 289
 6. String
- ![[cpp9.png]]  
+ ![cpp9.png](cpp9.png)
  output: 
  6
 jetson nano
@@ -82,7 +82,7 @@ nanO
 Enter name:Priya D
 Your name is:Priya D
 7. Math
-   ![[cpp10.png]]
+   ![cpp10.png](cpp10.png)
    output:
    7
    3
@@ -90,17 +90,18 @@ Your name is:Priya D
    19.3132
    4
    1.09861
-8. if statement   ![[cpp11.png]]
+8. if statement   
+   ![cpp11.png](cpp11.png)
    output:
    23 is greater than 13
    23 is greater than 13
 9. Switch
-   ![[cpp12.png]]
+   ![cpp12.png](cpp12.png)
    output:
    Enter numbers 1 to 12 in order to select the day: 3
    Mar
 10. while
-    ![[Pasted image 20250605211716.png]]
+    ![cpp13.png](cpp13.png)
     output
     1
     2
@@ -109,7 +110,7 @@ Your name is:Priya D
     5
     6
 11. do-while
-    ![[Pasted image 20250605211851.png]]
+    ![cpp14.png](cpp14.png)
     output:
     0
     1
