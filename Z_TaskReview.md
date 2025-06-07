@@ -19,3 +19,16 @@ Understanding & Progress:
 Task 1: SSR, Octocoupler, Differential pair, Arbitration, CRC
 Understanding & Progress:
 
+2/06/25
+Task 2:
+1. Start with cpp basics with the W3 schools website
+2. Start reading about an arduino, what it is and how it functions
+new terms:
+hardware abstraction layer - hal
+implementation of can
+c++ - w3schools
+vscode
+
+5/06/25
+Task 3:
+Discussed:
