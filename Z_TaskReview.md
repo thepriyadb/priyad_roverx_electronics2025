@@ -29,6 +29,14 @@ implementation of can
 c++ - w3schools
 vscode
 
-5/06/25
+07/06/25
 Task 3:
 Discussed:
+KiCAD:
+local labels
+global labels
+ground plane separate for 12 V and 5 V why?
+anaolg ground vs digital ground?
+bare metal programming
+Vin?
+

@@ -17,7 +17,7 @@ Arduino acts as a bridge between input devices (like sensors), and output device
 *Development board* that contains a microcontroller (like ATmega328P on Arduino Uno) and all circuitry necessary to connect and program easily.
 It includes:
 - USB interface - to upload code - USB port to connect Arduino to computer
-- Voltage regulator - ensures it gets steady and safe voltage level even if you supply a higher voltage from an external source 
+- Voltage regulator - ensures it gets steady and safe voltage level even if you supply a higher voltage from an external source - ams1117
 - I/O pins - physical pins on it that are used to connect sensors, LEDs, motors, buttons, etc.
 - Headers for sensors and modules - female/male pin connectors on the board
 
@@ -133,7 +133,7 @@ A more advanced one, for smoother, continuous adjustments is *PID Control* (Prop
 A special type of software that is permanently programmed into a hardware device. It tells the device how to operate (it lies btw hardware and higher level software).
 In Arduino, ***firmware*** is the low level program that runs on the microcontroller, making it work as intended after it is programmed.
 In Arduino, there are 2 types of firmware:
-- *Bootloader*: Small program pre-loaded into microcontroller. It *allows new code to be uploaded to microcontroller without using an external programmer*. It is stored in *Flash memory* in microcontroller. It runs every time you power or reset the board. 
+- *Bootloader*: Small program pre-loaded into microcontroller. It *allows new code to be uploaded to microcontroller without using an external programmer*. It is stored in *Flash memory* in microcontroller. It runs every time you power or reset the board. Initialises different peripherals.
   example, ATmega328P chip on Arduino Uno has *Optiboot* bootloader.
 - *USB-to-serial firmware* on a separate chip: Some boards have a second chip that acts as a USB-to-serial converter, example, ATmega16U2 on Arduino Uno. This chip also runs firmware that helps translate USB signals from your PC into serial data the main microcontroller understands. It allows the board to be recognized as a COM port on your computer. This firmware is factory-programmed and usually only updated when absolutely necessary.
 
