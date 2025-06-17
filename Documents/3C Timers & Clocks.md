@@ -31,17 +31,20 @@ This primary signal then goes through a clock tree for conditioning and routing.
 Finally, these adjusted clock signals are delivered to all the peripherals and the CPU core, synchronizing every gate and flip-flop.
 
 *Some clock management features:*
+
 *Clock Gating:*
 - Purpose: Significant power reduction by disabling clock signal to inactive modules.
 - Mechanism: Gating circuits block the clock signal from reaching a specific functional block or peripheral when it's not needed.
 - Benefit: Eliminates dynamic power consumption (power consumed during clock transitions) in inactive modules.
 - Contrast: Differs from simple frequency lowering; actively turns off the module's clock-related power drain.
+
 *Clock Security System:*
 - Purpose: Enhance system reliability and safety by handling external clock failure.
 - Mechanism: Monitors the primary (e.g., external crystal) clock source. If failure is detected, it automatically switches to a reliable internal oscillator.
 - Benefit: Prevents system crashes or unpredictable behavior due to external clock loss. Critical for safety-critical applications.
 
 *Types:*
+
 1. **System Clock**: This is the primary clock that drives the microcontroller's core and peripheral operations. It is responsible for synchronizing the execution of instructions and the timing of data transfers.
 2. **Peripheral Clocks**: These clocks are used to drive specific peripherals within the microcontroller, such as timers, communication interfaces, and analog-to-digital converters (ADCs). Peripheral clocks can often be configured independently of the system clock.
 3. **Real-Time Clock (RTC)**: An RTC is a specialized clock that keeps track of the current time and date, even when the microcontroller is powered off. It typically operates on a low-frequency oscillator to minimize power consumption.
@@ -64,6 +67,7 @@ A timer module typically consists of a counter, prescaler,
 - Compare Match Register (OCRx): Triggers events (e.g., interrupt, reset) when count equals its stored value.
 - Control Register (TCCR): Configures timer behavior, including mode (Normal, CTC, PWM), prescaler, and compare match values. CPU sets this before starting.
 - Interrupt Flag (TIFR): Signals events like overflow (when timer reaches max, it roles over to min, which generates a carry, raising an overflow flag which is a kid of interrupt flag) or compare match.
+
 Process:
 Timer operation begins with the CPU configuring the Control Register (TCCR) to set the desired mode and prescaler.
 The Clock Source drives the Prescaler, which can slow down the clock pulses. These adjusted pulses then increment the Counter Register (TCNTx).
@@ -71,12 +75,14 @@ As the counter increments, it continuously compares its value to the Compare Mat
 If the counter reaches its maximum value, an overflow occurs, rolling the counter back to zero and setting an Interrupt Flag (TIFR). This flag can then trigger an interrupt, prompting the CPU to execute an ISR to handle the overflow event.
 
 *Operational Modes:*
+
 1. Normal Mode: The timer simply counts up from 0 (or a preset value) until it overflows.
-2. Counter Mode: This mode allows the timer to count external events, such as pulses from sensors. It is useful for applications requiring event counting, such as frequency measurement.   
+2. Counter Mode: This mode allows the timer to count external events, such as pulses from sensors. It is useful for applications requiring event counting, such as frequency measurement.  
 3. PWM Mode: Timers can generate Pulse Width Modulation (PWM) signals, which are essential for controlling motors, LEDs, and other devices. By adjusting the duty cycle of the PWM signal, the effective power delivered to the load can be controlled.
 4. Capture Mode: This mode allows the timer to capture the time at which an external event occurs. It is commonly used for measuring the duration of events or for synchronization purposes.
 
 *Types:*
+
 1. Basic Timers: These timers provide simple counting functionality, allowing the microcontroller to measure elapsed time or generate delays. They can be configured to trigger interrupts when a specified count is reached.
 2. PWM Timers: Pulse Width Modulation (PWM) timers are used to generate PWM signals, which are essential for controlling the speed of motors, dimming LEDs, and other applications requiring variable output. The duty cycle of the PWM signal can be adjusted by changing the timer's compare value.
 3. Capture/Compare Timers: These timers can capture the value of the timer counter when an external event occurs (e.g., a rising edge on an input pin) and can also generate output signals based on specific compare values. This functionality is crucial for applications such as frequency measurement and event timing.

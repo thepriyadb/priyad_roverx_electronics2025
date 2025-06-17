@@ -40,3 +40,6 @@ anaolg ground vs digital ground?
 bare metal programming
 Vin?
 
+08/06/25
+Task 4:
+generate a pwm signal
