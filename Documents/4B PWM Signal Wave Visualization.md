@@ -14,7 +14,7 @@ Simulation in KiCAD
 
 In TinkerCAD
 
-![[Connection1.png]]
+![](../Images/Connection1.png)
 
 Actual Setup:
 
