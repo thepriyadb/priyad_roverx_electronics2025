@@ -177,3 +177,6 @@ Every microcontroller needs a clock to operate. The ATmega328P runs at 16 MHz us
 
 References:
 https://components101.com/microcontrollers/arduino-uno
+
+Functions of Arduino Serial Communication:
+
