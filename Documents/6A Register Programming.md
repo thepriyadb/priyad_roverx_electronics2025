@@ -12,36 +12,18 @@ void loop() {
 
 //constant pwm output
 
-  
-
 void setup() {
-
-  DDRD |= (1 << DDD6); // Set Pin 6 (PD6 / OC0A) as output
-
+  DDRD |= (1 << DDD6); 
   // Fast PWM Mode: WGM01 = 1, WGM00 = 1 → Mode 3
-
   TCCR0A = (1 << WGM00) | (1 << WGM01);
-
-  // Non-inverting mode: COM0A1 = 1
-
+  // Non-inverting mode -> COM0A1 = 1 => clears OC0A 
   TCCR0A |= (1 << COM0A1);
-
   // Prescaler = 64 → PWM freq ≈ 976 Hz
-
   TCCR0B = (1 << CS01) | (1 << CS00);
-
   OCR0A = 128;  // 50% Duty Cycle
-
 }
 
-  
-
-void loop() {
-
-  // Hardware PWM – nothing needed here
-
-}
-
+Note: PWM frequency = f_internal_clock / (Prescaler Value* (Top+1))
 ##### What is OC1A?
 - It stands for **Output Compare pin A of Timer1**
 - This is **Pin 9 on Arduino UNO**
@@ -73,14 +55,11 @@ You write these bits to choose:
 - **Normal mode** → just counts from 0 to max
 - **PWM mode** → creates wave signals
 - **CTC mode** → counts up to a match value, then resets
-
 ##### Example: Setting Fast PWM Mode 14
 TCCR1A |= (1 << WGM11);      // Set WGM11 = 1
 TCCR1A &= ~(1 << WGM10);     // Clear WGM10 = 0
 TCCR1B |= (1 << WGM12);      // Set WGM12 = 1
 TCCR1B |= (1 << WGM13);      // Set WGM13 = 1
-
-
 ## **Register Programming to generate a PWM wave**
 
 ##### Why Do We Use `|` and `&` in Register Programming?
@@ -211,36 +190,6 @@ void loop() {
 ### **Macros**
 They are **shortcuts** that let you quickly **control all pins** in a port (like PORTB, PORTC, PORTD) by **directly writing to hardware registers** without using `pinMode()` or `digitalWrite()`.
 Each **port** is like a group of 8 pins. The ATmega328P groups pins into `PORTB`, `PORTC`, and `PORTD`. Each group has a corresponding control register.
-
-#### **Port Wide Operations**
-
-| Operation            | Macro Definition                                               | What It Does                                           | Example                                                        |
-| -------------------- | -------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------- |
-| _Set all as outputs_ | `#define SET_ALL_OUTPUTS(port) (DDR ## port = 0xFF)`           | Makes all pins in port work as outputs                 | `SET_ALL_OUTPUTS(B)` → All PORTB pins are outputs              |
-| _Set all as inputs_  | `#define SET_ALL_INPUTS(port) (DDR ## port = 0x00)`            | Makes all pins in port work as inputs                  | `SET_ALL_INPUTS(C)` → All PORTC pins are inputs                |
-| _Custom mode set_    | `#define SET_PORT_MODE(port, ddr_cfg) (DDR ## port = ddr_cfg)` | Sets selected pins as inputs/outputs using binary mask | `SET_PORT_MODE(B, 0x03)` → PB0, PB1 as outputs, rest as inputs |
-| _Set all pins HIGH_  | `#define PORT_SET_HIGH(port) (PORT ## port = 0xFF)`            | Drives all output pins in the port to HIGH (5V)        | `PORT_SET_HIGH(D)`                                             |
-| _Set all pins LOW_   | `#define PORT_SET_LOW(port) (PORT ## port = 0x00)`             | Drives all output pins in the port to LOW (0V)         | `PORT_SET_LOW(B)`                                              |
-| _Toggle all pins_    | `#define PORT_TOGGLE(port) ((PORT ## port) = ~(PORT ## port))` | Flips HIGH to LOW and vice versa for all pins          | `PORT_TOGGLE(C)`                                               |
-| _Write custom data_  | `#define PORT_WRITE(port, data) (PORT ## port = data)`         | Writes a specific 8-bit pattern to the entire port     | `PORT_WRITE(B, 0x0F)` → PB0–PB3 HIGH, PB4–PB5 LOW              |
-| _Read port input_    | `#define PORT_READ(port) PIN ## port`                          | Reads the digital input of all pins in the port        | `uint8_t state = PORT_READ(D);`                                |
-#### **Single Pin Operations**
-
-Pin Set Mode:
-This macro can be used to set a specific pin of a specific port as INPUT or OUTPUT pin.
-
-|                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| '#define SET_PIN_MODE(port, pin, mode) <br>  if (mode == INPUT) { <br>    DDR ## port &= ~(1 << pin); <br>  } else if (mode == OUTPUT) { <br>    DDR ## port \|= (1 << pin); <br>  } |
-
-And here is an example for using it to set Arduino pin13 (PB5) as output pin, and Arduino pin4 (PD4) as input pin.
-
-|                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------- |
-| SET_PIN_MODE(B, 5, OUTPUT);  // Sets Pin13 (B5) As Output Pin<br><br>SET_PIN_MODE(D, 4, INPUT);   // Sets Pin4 (D4) As Input Pin            |
-|                                                                                                                                             |
-| .#define SET_PIN_MODE_OUTPUT(port, pin) DDR ## port \|= (1 << pin)<br><br>'#define SET_PIN_MODE_INPUT(port, pin) DDR ## port &= ~(1 << pin) |
-
 ### **Timer/Counter Registers**
 
 | Timer      | Bits   | PWM Pins Used |
