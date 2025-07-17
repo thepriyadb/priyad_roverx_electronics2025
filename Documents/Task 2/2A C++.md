@@ -31,25 +31,25 @@ Some things you should know:
 1. Printing a message
 - without using namespace
   
-  ![cpp1.png](../Images/cpp1.png)
+  ![cpp1.png](cpp1.png)
   
   output : Hello!
   
 - using namespace
   
-  ![cpp2.png](../Images/cpp2.png)
+  ![cpp2.png](cpp2.png)
   
   output : Hello World!
 
 - printing a number
   
-  ![cpp3.png](../Images/cpp3.png)
+  ![cpp3.png](cpp3.png)
   
   output : 13
   
 2. Algebraic functions
    
-   ![cpp4.png](../Images/cpp4.png)
+   ![cpp4.png](cpp4.png)
    
    output: 
    10
@@ -59,7 +59,7 @@ Some things you should know:
    
 3. \n vs endl;
    
-   ![cpp5.png](../Images/cpp5.png)
+   ![cpp5.png](cpp5.png)
    
    output:
    Hello!
@@ -69,7 +69,7 @@ Some things you should know:
    
 4. Variables
    
-   ![cpp6.png](../Images/cpp6.png)
+   ![cpp6.png](cpp6.png)
    
    output:
    23
@@ -82,17 +82,17 @@ Some things you should know:
    
 5. Area of a square
 
-![cpp7.png](../Images/cpp7.png)
+![cpp7.png](cpp7.png)
 
 - using user input
   
-  ![cpp8.png](../Images/cpp8.png)
+  ![cpp8.png](cpp8.png)
    
    output: 289
    
 6. String
 
- ![cpp9.png](../Images/cpp9.png)
+ ![cpp9.png](cpp9.png)
  
  output: 
  6
@@ -108,7 +108,7 @@ Your name is:Priya D
 
 7. Math
    
-   ![cpp10.png](../Images/cpp10.png)
+   ![cpp10.png](cpp10.png)
    
    output:
    7
@@ -119,7 +119,7 @@ Your name is:Priya D
    1.09861
    
 8. if statement   
-   ![cpp11.png](../Images/cpp11.png)
+   ![cpp11.png](cpp11.png)
    
    output:
    23 is greater than 13
@@ -127,7 +127,7 @@ Your name is:Priya D
    
 9. Switch
    
-   ![cpp12.png](../Images/cpp12.png)
+   ![cpp12.png](cpp12.png)
    
    output:
    Enter numbers 1 to 12 in order to select the day: 3
@@ -135,7 +135,7 @@ Your name is:Priya D
    
 10. while
     
-    ![cpp13.png](../Images/cpp13.png)
+    ![cpp13.png](cpp13.png)
     
     output
     1
@@ -147,7 +147,7 @@ Your name is:Priya D
     
 11. do-while
     
-    ![cpp14.png](../Images/cpp14.png)
+    ![cpp14.png](cpp14.png)
     
     output:
     0

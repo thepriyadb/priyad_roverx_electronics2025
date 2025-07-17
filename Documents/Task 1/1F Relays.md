@@ -7,17 +7,17 @@ Relay is an electrically operated switch activated by an electromagnet which pul
 ---
 **Construction**:
 
-![Relay diagram](Images/Relay.png)
+![Relay diagram](Relay.png)
 
 A basic electromechanical relay is constructed using an electromagnet, a movable armature, and a set of contacts. The electromagnet, made of a coil and an iron core, creates a magnetic field when energized. This field pulls the armature, which in turn activates or deactivates the contacts, controlling a circuit.
 
 **Inside the relay:**
 
-![Inside relay digram](Images/InsideRelay.png)
+![Inside relay digram](InsideRelay.png)
 
 The _coil_ pins control the switch, and the _NC_, _NO_, and _COM_ pins make up the switch.
 
-![Inside relay](Images/InsideRelay2.png)
+![Inside relay](InsideRelay2.png)
 
 A coil wound around a magnetic core makes up an electromagnet. It generates a magnetic field around it when an electrical current passes through the coil.
 The armature is a movable component within the relay. When the coil is energized, the magnetic field it produces attracts the armature, causing it to move.
@@ -40,19 +40,19 @@ A three-phase SSR is designed to control high power three phase AC loads by simu
 Normally Open (NO) Pin Connection:
 If you want the device that you want to switch on/off to be disconnected from power when the relay is not activated, you need to use the normally open (NO) pin. As soon as the relay coil receives power, the switch closes, completing the circuit and allowing electricity to flow through it so that whatever you’ve connected turns on.
 
-![[Images/NormallyOpen.png]]
+![[NormallyOpen.png]]
 
 Normally Closed (NC) Pin Connection:
 If you want the device that you want to control to be connected to power when the relay is not activated, you need to use the normally closed (NC) pin. As soon as the relay coil receives power, it causes the switch to open, interrupting the circuit and stopping the flow of electricity to your device.
 
-![[Images/NormallyClosed.png]]
+![[NormallyClosed.png]]
 
 ## Relay Switch types:
 
 * SPDT Relay: Single Pole Double Throw (SPDT). It’s the most commonly used. It’s a 5-pin relay with the following pins:
   The _COM_ pin is always used. And although you can use both _NC_ and _NO_, it’s common to use just one of them.
   
-  ![[Images/SPDT.png]]
+  ![[SPDT.png]]
   
 * Single Pole Single Throw (SPST) : This relay has one normally open (NO) and one common (COM) contact. It can either connect or disconnect a single circuit.
   

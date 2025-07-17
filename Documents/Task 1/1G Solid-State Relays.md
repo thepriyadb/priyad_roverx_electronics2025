@@ -91,7 +91,7 @@ Various SSR packaging/integration styles:
 → Used in industrial & heavy-duty applications
 The integrated heat sink enables a slim design. These relays are mainly installed in control panels.
 
-![[Images/relay1.png]]
+![[relay1.png]]
 
 **Separate Heat Sink**  
 → Heat sink sold separately  
@@ -101,7 +101,7 @@ The integrated heat sink enables a slim design. These relays are mainly installe
 Separate installation of heat sinks allows the customers to select heat sinks to match the  
 housings of the devices they use. These relays are mainly built into the devices.
 
-![[Images/Pasted image 20250529130816.png]]
+![[Pasted image 20250529130816.png]]
 
 **Relay-Shaped SSR (Mechanical Lookalike)**  
 → Same size and pin layout as mechanical relays  
@@ -110,7 +110,7 @@ housings of the devices they use. These relays are mainly built into the devices
 → Offers silent, maintenance-free switching
 These relays have the same shape as plug-in relays and the same sockets can be used. They are usually built into control panels and used for I/O applications for programmable controllers and other devices.
 
-![[Images/Pasted image 20250529130928.png]]
+![[Pasted image 20250529130928.png]]
 
 **PCB-Mounted SSR**  
 → Compact size for soldering directly on PCB  
@@ -118,5 +118,5 @@ These relays have the same shape as plug-in relays and the same sockets can be u
 → Ideal for embedded systems and small circuits  
 → Saves space and simplifies assembly
 
-![[Images/Pasted image 20250529131023.png]]
+![[Pasted image 20250529131023.png]]
 

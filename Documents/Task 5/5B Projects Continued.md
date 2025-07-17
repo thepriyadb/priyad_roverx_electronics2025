@@ -9,25 +9,25 @@ A *serial port* is a communication interface that sends data one bit at a time, 
 
 When I input a number (example, 5) in serial monitor in Arduino IDE, the 6 LEDs blink those number (example, 5) of times.
 
-![](../Images/LEDPWM4.png)
+![](LEDPWM4.png)
 
 for example, 
 Input in Serial Monitor: 7
 Output:
 
-![](../Images/sketch_4.mp4)
+![](sketch_4.mp4)
 
 ### PROJECT 5:
 
 When I input (LED_number Number_of_times_to_blink) (example, 1 5 ) in the serial monitor then the LED blinks the mentioned number of times.
 
-![](../Images/LEDPWM5.png)
+![](LEDPWM5.png)
 
 for example,
 Input on Serial Monitor: 3 7
 Output:
 
-![](../Images/sketch_5.mp4)
+![](sketch_5.mp4)
 
 PROJECT 6:
 

@@ -16,14 +16,14 @@ In some electronic designs, you need to send a signal to a part of the system th
 ---
 ## Structure
 
-![[Images/Pasted image 20250529135257.png]]
+![[Pasted image 20250529135257.png]]
 
 An optocoupler is made up of two electrically isolated circuits. The first circuit has an infrared emitting diode, whereas the second circuit contains an infrared sensor device, such as a photodiode, phototransistor, photo TRAIC, or photo SCR. Glass, air, or translucent plastic can be used to fill the space between the two circuits. The light is emitted by the LED, and it is received and amplified by the phototransistor. The anode and cathode of the LED are the first and second pins, whereas the emitter and collector of the phototransistor are the third and fourth pins.
 
 ---
 ## Working:
 
-![[Images/Pasted image 20250529134832.png]]
+![[Pasted image 20250529134832.png]]
 
 First, the current is applied to the optocoupler, which causes the LED to generate infrared light proportional to the current flowing through it. When light strikes the photosensor, it conducts a current and turns on. The IR beam is switched off when the current running through the LED is disrupted, forcing the photosensor to stop conducting. The photosensor is the output circuit that detects light, and the output is either AC or DC depending on the type of output circuit.
 The output of an electrically isolated circuit is controlled by adjusting the circuit’s input, which is the basic operating concept of an optocoupler. A voltage source provides input to the Infrared LED, and the intensity of the voltage source can be varied by altering the input voltage. The light emitted has a specific wavelength. This light is detected by the photodetector, which turns light energy into photocurrent. The generated output current is then amplified. The output current is proportional to the amount of light that strikes the device.
@@ -33,7 +33,7 @@ The output of an electrically isolated circuit is controlled by adjusting the ci
 
 In DC circuits, **photo-transistor** and **photo-Darlington** are commonly utilized, whereas **photo-SCR** and **photo-TRIAC** are commonly employed to control AC circuits.
 
-![[Images/OctocouplerConfigurations.png]]
+![[OctocouplerConfigurations.png]]
 
 ---
 ## **Digital interfacing**
@@ -42,7 +42,7 @@ Optocoupler devices are ideally suited for use in digital interfacing applicatio
 
 **TTL Interface**
 
-![[Images/TTLInterface.png]]
+![[TTLInterface.png]]
 
 The circuit in this figure is used to safely connect two digital (TTL) circuits using a device called an optocoupler. An optocoupler sends signals using light instead of direct wires, which protects the two circuits from damaging each other.
 In this setup, the first TTL circuit controls an LED (inside the optocoupler). But *TTL outputs are better at pulling signals down to 0 volts than pushing them up to 5 volts*. That’s why the LED is connected between 5V and the output pin of the first TTL chip. This way, when the output goes LOW, it allows current to flow through the LED, turning it ON. When the output goes HIGH, the LED should turn OFF.
@@ -51,7 +51,7 @@ On the other side of the optocoupler is a phototransistor. When the LED is ON, l
 
 **CMOS Interface**
 
-![[Images/CMOS.png]]
+![[CMOS.png]]
 
 CMOS ICs (another type of digital chip) are better than TTL in one big way: they can both pull the signal up and down equally well. This means they can push current out (source) and pull current in (sink) with similar strength, usually a few milliamps.
 Because of this, you have two choices when using a CMOS chip to control an optocoupler:
@@ -62,7 +62,7 @@ Both methods work well with CMOS because it’s strong in both directions. But i
 ---
 ## **Analog Interfacing**
 
-![[Images/AudioCouplingCircuit.png]]
+![[AudioCouplingCircuit.png]]
 
 An optocoupler can also be used to transfer analog signals, like audio, from one circuit to another while keeping them electrically isolated. Figure 17 shows how this is done using an op-amp and an optocoupler.
 
