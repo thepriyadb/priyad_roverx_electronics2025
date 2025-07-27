@@ -1,0 +1,6 @@
+# Design a pcb with ESP32-C3-DEVKITC and 4 LEDs and 2 switches
+
+### Components
+- ESP32-C3-DEVKITC
+- LEDs x4
+- Switches x2
