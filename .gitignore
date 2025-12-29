@@ -1,8 +1,0 @@
-Debug/
-Release/
-.settings/
-*.o
-*.elf
-*.map
-*.hex
-*.bin
