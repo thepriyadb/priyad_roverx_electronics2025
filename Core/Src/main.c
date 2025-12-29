@@ -49,8 +49,8 @@ TIM_HandleTypeDef htim3;
 uint8_t usbRxBuf[USB_BUFLEN];
 uint16_t usbRxBufLen;
 
- uint16_t pwm_values[30];
- uint8_t dir_values[30];
+uint16_t pwm_values[30];
+uint8_t dir_values[30];
 
 /* LATENCY FIX: volatile ensures the main loop sees the change immediately */
 volatile int usbRxFlag = 0;
@@ -133,25 +133,27 @@ int main(void)
 			  for (int i = 0; i < usbRxBufLen; i += 3) {
 				  uint8_t motor_num = usbRxBuf[i];
 
-				  if (motor_num >= 0 && motor_num <= 7) {
-					  pwm_values[motor_num- 0] = usbRxBuf[i+1];
-					  dir_values[motor_num- 0] = usbRxBuf[i+2] ;
+		  if (motor_num >= 0 && motor_num <= 7) {
+			  pwm_values[motor_num- 0] = usbRxBuf[i+1];
+			  dir_values[motor_num- 0] = usbRxBuf[i+2] ;
 				  }
 			  }
 		  }
 
 		  // Update Hardware
-	  	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, pwm_values[4]);
-	  	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0,(dir_values[4]==1)?  GPIO_PIN_SET : GPIO_PIN_RESET);
+	  	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, pwm_values[0]);
+	  	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0,(dir_values[0]==1)?  GPIO_PIN_SET : GPIO_PIN_RESET);
 
-	  	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, pwm_values[5]);
-	  	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,(dir_values[5]==1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	  	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, pwm_values[1]);
+	  	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2,(dir_values[1]==1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
-	  	  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_values[6]);
-	  	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, (dir_values[6]==1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	  	  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pwm_values[2]);
+	  	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, (dir_values[2]==1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
-		  HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_SET);
+	  	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, pwm_values[3]);
+	      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, (dir_values[3]==1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
+	      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 	  	  }
 	  	  else{
 	  		  // Optional: Add a very small delay or __WFI() to save power,
